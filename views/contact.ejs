@@ -1,0 +1,27 @@
+<% include partials/header %>
+
+ <div class="background" id="contact">
+   <div class="row justify-content-center align-items-center" id="overlay">
+        <div class="col-8 col-md-4">
+          <form method="POST" action="/contact">
+       
+          <div class="form-group">
+            <input class="form-control" type="text" name="name" placeholder="Name">
+          </div>
+          <div class="form-group">
+            <input class="form-control" type="email" name="email" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <textarea name="message" class="form-control" rows="3">Message</textarea>
+          </div>
+          <button  type="submit" class="btn btn-success mb-3">Submit</button>
+          </form>
+      </div>
+        
+  </div>
+   </div>
+
+
+  
+  
+<% include partials/footer %>

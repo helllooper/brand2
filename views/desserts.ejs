@@ -1,0 +1,33 @@
+<% include partials/header %>
+  <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-6 background" id="recipe" style="background-image: url('<%= articles[articles.length - 1].image %>');">
+        </div>
+        <div class="col-lg-6 p1text">
+          <p>DAILY GUIDE</p>
+          <h1><%= articles[articles.length - 1].title %></h1>
+          <h6><%= articles[articles.length - 1].brief %></h6>
+          <a href="/articles/<%= articles[articles.length - 1]._id %>" class="btn">READ MORE</a>
+      </div>
+  <div class="container-fluid background mt-4" id="background2"></div>
+  <div class="container-fluid portion">
+  <h1>Our Dessertss</h1>
+    <div class="row">
+     <% for(var i = articles.length - 2;  i > -1; i--){%>
+      <div class="col-md-6 col-lg-3 mb-3">
+        <a href="/articles/<%= articles[i]._id %>">
+          <div class="card">
+            <img src="<%= articles[i].image %>" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text card-text1">Guide</p>
+              <h3 class="card-title"><%= articles[i].title %></h3>
+              <p class="card-text card-text2">By <%= articles[i].author %></p>
+            </div>
+          </div>
+        </a>
+      </div>
+    <% } %>
+    </div>
+  </div>
+
+<% include partials/footer %>

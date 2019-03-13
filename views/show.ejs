@@ -1,0 +1,67 @@
+<% include partials/header %>
+ <div class="container" id="show">
+     <div class="justify-content-end mt-3"><iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fbrand2-onym.c9users.io%2F<%= article._id %>%3Fshow%3D<%= article.type %>&layout=button_count&size=large&mobile_iframe=true&appId=367943490459917&width=84&height=28" width="84" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+     <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+     </div>
+     <h1><%= article.title %></h1>
+     <p class="border-bottom border-dark pb-3">By <%= article.author %></p>
+     <div class="row border-bottom border-dark pb-3">
+         <div class="col-md-6 order-md-1">
+             <img src="<%= article.image %>" class="img-fluid">
+         </div>
+         <div class="col-md-6 order-md-0">
+             <h4><%= article.brief %></h4>
+         </div>
+     </div>
+      <div class="row pt-3">
+        <!--facebook sharer-->
+        <!--end of fb sharer-->
+      <div class="col-md-4 border-right border-dark">
+       <h4>Ingredients</h4>
+       <%- article.ingredients %>
+      </div>
+      <div class="col-md-8">
+        <h4>Preparation</h4>
+        <%- article.preparation %>
+        <h4 class="mt-5">Comments</h4>
+        <% article.comments.forEach(function(comment){%>
+        <div class="row alert alert-success">
+            <div class="col-2 col-lg-1">
+                <img src="<%= comment.pic %>" class="img-fluid">
+            </div>
+            <div class="col-10 col-lg-11">
+                <h6><%= comment.user %></h6>
+                <p><%= comment.text %></p>
+                <% if(currentUser && currentUser.email === "helllooper@gmail.com"){ %>
+                <form action="/articles/<%= article._id %>/<%= comment._id %>?_method=DELETE" method="POST">
+                    <button type="submit" class="btn btn-danger">DELETE</button>
+                </form>
+                <% } %>
+            </div>
+        </div>
+        <% }) %>
+        <div class="row">
+            <div class="col-2 col-lg-1">
+                <% if(currentUser){ %>
+                <img src="<%= currentUser.pic%>" class="img-fluid">
+                <% } %>
+            </div>
+            <div class="col-10 col-lg-11">
+                <form action="/articles/<%= article._id %>" method="POST">
+                    <div class="form-group">
+                        <textarea name="text" class="form-control" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success">Comment</button>
+                </form>
+
+            </div>
+        </div>
+      </div>
+    </div>
+    <% if(currentUser && currentUser.email === "helllooper@gmail.com"){ %>
+    <form action="/articles/<%= article._id%>?_method=DELETE" method="POST">
+        <button type="submit" class="btn btn-outline-danger btn-lg mt-3">DELETE</button>
+    </form>
+    <% } %>
+  </div>
+<% include partials/footer %>

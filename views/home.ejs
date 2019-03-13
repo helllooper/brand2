@@ -1,0 +1,111 @@
+<% include partials/header %>
+  <!-- portion1 -->
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-6 translatedL" id="p1img" style="background-image: url('<%= food[food.length - 1].image %>');"></div>
+      <div class="col-lg-6 p1text translatedR">
+        <p>DAILY GUIDE</p>
+        <h1><%= food[food.length -1].title%></h1>
+        <h6><%= food[food.length -1].brief %></h6>
+        <a href="/articles/<%= food[food.length -1]._id%>" class="btn">READ MORE</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- End of portion1 -->
+  <!-- background1 -->
+  <div class="container-fluid background mt-4" id="background1"></div>
+  <!-- End of background1 -->
+  <!-- portion2 -->
+  <div class="container-fluid portion">
+  <h1>Our Recipes</h1>
+    <div class="row">
+     <% for(i = food.length - 2; i > food.length - 6; i--){%>
+      <div class="col-md-6 col-lg-3">
+        <a href="/articles/<%= food[i]._id %>">
+          <div class="card">
+            <img src="<%= food[i].image %>" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text card-text1">Guide</p>
+              <h3 class="card-title"><%= food[i].title %></h3>
+              <p class="card-text card-text2">By <%= food[i].author %></p>
+            </div>
+          </div>
+        </a>
+      </div>
+    <% } %>
+    </div>
+  </div>
+  <!-- End of portion2 -->
+  <!-- background2 -->
+  <div class="container-fluid background" id="background2"></div>
+  <!-- End of background2 -->
+  <!-- portion3 -->
+  <div class="container-fluid portion">
+    <h1>Our Desserts</h1>
+    <div class="row">
+     <% for(i = desserts.length - 1; i > desserts.length - 5; i--){%>
+            <div class="col-md-6 col-lg-3">
+              <a href="/articles/<%= desserts[i]._id %>">
+                <div class="card">
+                  <img src="<%= desserts[i].image %>" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <p class="card-text card-text1">Guide</p>
+                    <h3 class="card-title"><%= desserts[i].title %></h3>
+                    <p class="card-text card-text2"><%= desserts[i].author %></p>
+                  </div>
+                </div>
+              </a>
+            </div>
+    <%  } %>
+
+
+    </div>
+  </div>
+  <!-- End of portion3 -->
+  <!-- background3 -->
+  <div class="container-fluid background" id="background3"></div>
+   <!--End of background3 -->
+   <!--portion4 -->
+  <div class="container-fluid portion">
+    <h1>Our Beverages</h1>
+    <div class="row">
+     <% for(i = beverages.length - 1; i > beverages.length - 5; i--){%>
+            <div class="col-md-6 col-lg-3">
+              <a href="articles/<%= beverages[i]._id %>">
+                <div class="card">
+                  <img src="<%= beverages[i].image %>" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <p class="card-text card-text1">Guide</p>
+                    <h3 class="card-title"><%= beverages[i].title %></h3>
+                    <p class="card-text card-text2">By <%= beverages[i].author %></p>
+                  </div>
+                </div>
+              </a>
+            </div>
+      
+      <% } %>
+
+
+
+
+    </div>
+  </div>
+  <!-- End of portion4 -->
+  <!-- video -->
+  <div class="container-fluid">
+    <h1 id="header">Recent Video</h1>
+    <div class="row">
+      <div class="col-lg-6">
+        <video src="videos/videoplayback.mp4" autoplay muted loop></video>
+      </div>
+      <div class="col-lg-6 p1text">
+        <p>DAILY VIDEO</p>
+        <h1>TRY OUR PASTA</h1>
+        <h6>Pasta is a staple food of traditional Italian cuisine, with the first reference dating to 1154 in Sicily.Also commonly used to refer to the variety of dishes made with it., pasta is a type of noodle typically made from an unleavened dough of a durum wheat flour mixed with water or eggs, and formed into sheets or various shapes, then cooked by boiling or baking. Some pastas are made using rice flour or legumes like black beans or lentils in place of wheat flour to yield a different taste and texture, or for those who need to avoid products containing gluten.</h6>
+      </div>
+    </div>
+  </div>
+  <!-- End of video -->
+<% include partials/footer %>

@@ -1,0 +1,346 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+#search {
+	position: fixed;
+	background-color: rgba(255, 255, 255, 0.7);
+	width: 100%;
+	height: 100%;
+	z-index: 11;
+	display: none;
+}
+
+#search form {
+	width: 50%;
+	height: 5%;
+}
+
+#search input {
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+	border:none;
+}
+
+#search input::placeholder {
+	font-weight: 700;
+	font-size: 20px;
+}
+
+#search input:focus {
+	border: none;
+	outline: none;
+	/*font-size: 30px;*/
+	color: #7c7c7c;
+}
+
+#search i {
+	font-size: 20px;
+	color: #7c7c7c;
+}
+
+.fa-times {
+	position: absolute;
+	top: 10%;
+	right: 10%;
+}
+
+nav {
+	background-color: #1E0F02;
+	padding: 25px !important;
+}
+
+nav img{
+	height: 50px;
+	width: 50px;
+}
+
+nav a {
+	color: #f2f2ea;
+	font-size: 12px;
+	transition: all 500ms;
+}
+
+nav a:hover {
+	color: #A13F20;
+}
+
+nav form {
+	margin: auto;
+}
+
+nav input {
+	background-color: transparent !important;
+	border-radius: 0 !important;
+}
+
+nav input:focus {
+	outline: none !important;
+	box-shadow: none !important;
+	border-color: #A13F20 !important;
+}
+
+nav input::placeholder{
+	color: #f2f2ea !important;
+	opacity: 1;
+}
+
+nav button {
+	border-color: #f2f2ea !important;
+	color: #f2f2ea !important;
+	border-radius: 0 !important;
+	transition: all 500ms;
+}
+
+nav button:hover {
+	background-color: #A13F20 !important;
+	border-color: #A13F20 !important;
+}
+
+
+button:focus {
+	outline: none;
+}
+
+video{
+	width: 100%;
+}
+
+#p1img {
+	/*background-image: url("../images/portion1.jpeg");*/
+	width: 100%;
+	height: 100vh;
+	/*background-attachment: fixed;*/
+	background-position: center;
+	background-size: cover;
+}
+
+.p1text {
+	width: 100%;
+	height: 100vh;
+	background-color: #373D3B;
+	padding: 50px;
+	color: white;
+
+}
+
+.p1text p {
+	border-bottom: 3px solid #F7C658;
+	padding: 10px;
+	width: 40%;
+	font-weight: 700;
+}
+
+.p1text h1 {
+	margin-bottom: 40px;
+	font-weight: 700;
+}
+
+.p1text h6 {
+/*	font-weight: 700;*/
+	margin-bottom: 40px;
+}
+
+.p1text a {
+	color: #F7C658 !important;
+	letter-spacing: 3px;
+	background-color: #2B2B2B;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.portion {
+	border-top: 3px solid #2B2B2B;
+	text-align: center;
+	margin-top: 20px;
+	padding-top: 20px;
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+}
+
+.portion h1 {
+	font-weight: 700;
+}
+
+.card {
+	color: white;
+	background-color: #373D3B; 
+	border-radius: 0;
+	font-weight: 700;
+	margin: auto;
+}
+
+.card-img-top {
+	border-radius: 0;
+}
+
+.card-text1 {
+	border-bottom: 3px solid #F7C658;
+	padding: 10px;
+}
+
+ a {
+	text-decoration: none !important;
+}
+
+.portion h1 {
+	font-weight: 700;
+}
+
+.background {
+	width: 100%;
+	height: 40vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+#background1 {
+	background-image: url("../images/background1.jpeg");
+	background-attachment: fixed;
+
+}
+
+#background2 {
+	background-image: url("../images/background2.jpeg");
+	background-attachment: fixed;
+}
+
+#background3 {
+	background-image: url("../images/background3.jpeg");
+	background-attachment: fixed;
+}
+
+#header {
+	font-weight: 700;
+	text-align: center;
+}
+
+footer {
+	width: 100%;
+	background-color: #373D3B;
+	color: white;
+	padding: 20px;
+}
+
+footer i {
+	font-size: 30px;
+	margin: 10px;
+}
+
+#footer-head {
+	border-bottom: 3px solid #F7C658;
+}
+
+button:hover {
+	color: white !important;
+}
+
+#show h4{
+	font-weight: 700;
+}
+
+#add {
+	background-image: url("../images/portion1.jpeg");
+	height: 110vh;
+	position: relative;
+}
+
+
+
+#overlay {
+	background-color: rgba(0, 0, 0, 0.7);
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+#add input, #add textarea, #add select {
+	border-radius: 0 !important;
+	background-color: transparent;
+	color: white;
+}
+
+#add input::placeholder {
+	color: white;
+}
+
+option {
+	color: black;
+}
+
+#recipe {
+	height: 100vh;
+
+}
+
+#logIn{
+  width: 360px;
+  margin: 100px auto;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  padding: 45px;
+  background-color: white;
+}
+
+#fb {
+	background-color: #4267B2;
+	color: white;
+
+}
+
+#logIn i{
+	font-size: 25px;
+}
+
+.justify-content-end {
+	display: flex;
+}
+
+#google {
+	background-color: #4285F4;
+	color: white;
+}
+
+#google img {
+	width: 25px;
+	height: 25px;
+}
+
+h6 {
+	font-weight: 700;
+}
+
+.alert-success p {
+	color: black;
+}
+
+.progress {
+
+	display: none;
+}
+
+#team img {
+	border-radius: 200px;
+}
+
+#contact {
+	background-image: url("../images/portion1.jpeg");
+	height: 80vh;
+	position: relative;
+}
+#contact input, #contact textarea{
+	border-radius: 0 !important;
+	background-color: transparent;
+	color: white;
+}
+
+#contact input::placeholder {
+	color: white;
+}
+
+

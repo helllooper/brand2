@@ -34,7 +34,8 @@ cloudinary.config({
 });
 
 
-mongoose.connect("mongodb://localhost:27017/brand2", {useNewUrlParser: true});
+// mongoose.connect("mongodb://localhost:27017/brand2", {useNewUrlParser: true});
+mongoose.connect("mongodb://EmadHassan:2470617ayman@ds017165.mlab.com:17165/brand2");
 app.use(flash());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(expressSanitizer());

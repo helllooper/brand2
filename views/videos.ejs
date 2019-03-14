@@ -20,7 +20,7 @@
           <div class="card-body">
             <h5 class="card-title"><%= videos[i].title %></h5>
             <p class="card-text"><%= videos[i].body %></p>
-            <p>By <%= videos[i].name %></p>
+            <p>By <%= videos[i].chef %></p>
             <% if(currentUser && currentUser.email === "helllooper@gmail.com"){%>
             <form action="/videos/<%= videos[i]._id%>?_method=DELETE" method="POST">
               <button class="btn btn-danger" type="submit">DELETE</button>

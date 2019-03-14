@@ -169,9 +169,14 @@ video{
 	color: white;
 	background-color: #373D3B; 
 	border-radius: 0;
-	font-weight: 700;
 	margin: auto;
 	height: 450px;
+}
+
+.card-title {
+	font-weight: 700;
+	border-bottom: 3px solid #F7C658;
+	padding: 10px;
 }
 
 .card-img-top {

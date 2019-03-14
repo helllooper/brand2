@@ -34,8 +34,8 @@ cloudinary.config({
 });
 
 
-// mongoose.connect("mongodb://localhost:27017/brand2", {useNewUrlParser: true});
-mongoose.connect("mongodb://EmadHassan:2470617ayman@ds017165.mlab.com:17165/brand2");
+mongoose.connect("mongodb://localhost:27017/brand2", {useNewUrlParser: true});
+// mongoose.connect("mongodb://EmadHassan:2470617ayman@ds017165.mlab.com:17165/brand2");
 app.use(flash());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(expressSanitizer());
@@ -53,7 +53,7 @@ app.use(passport.session());
 passport.use(new facebookStrategy({
     clientID: "367943490459917",
     clientSecret: "b31dc8b58e1f79b26b0cbb755edf310f",
-    callbackURL: "https://brand2-onym.c9users.io/auth/facebook/callback",
+    callbackURL: "https://tranquil-brook-47447.herokuapp.com/auth/facebook/callback",
     profileFields: ['id', 'displayName', 'email', 'picture.type(large)']
   },
   function(accessToken, refreshToken, profile, done) {
@@ -82,7 +82,7 @@ passport.use(new facebookStrategy({
 passport.use(new GoogleStrategy({
     clientID: "1001500417798-4p3umifls4bm8m2roh9jg4a57ah5edmq.apps.googleusercontent.com",
     clientSecret: "UgwPj5q7UlH9c3SpzgEbpkU8",
-    callbackURL: "https://brand2-onym.c9users.io/auth/google/callback"
+    callbackURL: "https://tranquil-brook-47447.herokuapp.com/auth/google/callback"
   },  function(accessToken, refreshToken, profile, done) {
       User.findOne({Id:profile.id}, function(err, user){
           if(err){

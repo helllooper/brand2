@@ -12,8 +12,8 @@
         <h6>Pasta is a staple food of traditional Italian cuisine, with the first reference dating to 1154 in Sicily.Also commonly used to refer to the variety of dishes made with it., pasta is a type of noodle typically made from an unleavened dough of a durum wheat flour mixed with water or eggs, and formed into sheets or various shapes, then cooked by boiling or baking. Some pastas are made using rice flour or legumes like black beans or lentils in place of wheat flour to yield a different taste and texture, or for those who need to avoid products containing gluten.</h6>
       </div>
     </div>
-    <div class="row">
-      <% for(var i = videos.length - 2;  i > -1; i--){%>
+    <div class="row mb-3">
+      <% for(var i = videos.length - 1;  i > -1; i--){%>
       <div class="col-md-6 col-lg-4 mt-3">
         <div class="card">
           <video src="<%= videos[i].url %>" controls></video>

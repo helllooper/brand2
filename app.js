@@ -216,11 +216,11 @@ Article.find({type:"food"}, function(err, allFood){
 });
 });
 
-app.get("/add", function(req, res){
+app.get("/add", isEmad, function(req, res){
    res.render("add"); 
 });
 
-app.post("/add", upload.single("image"), function(req, res){
+app.post("/add", isEmad, upload.single("image"), function(req, res){
    cloudinary.v2.uploader.upload(req.file.path, {invalidate:true}, function(err, result){
        if(err){
            req.flash("error", err.message);
@@ -294,7 +294,7 @@ app.get("/beverages", function(req, res){
    }); 
 });
 
-app.get("/addVideo", function(req, res){
+app.get("/addVideo", isEmad, function(req, res){
     res.render("addVideo");
 });
 
@@ -311,7 +311,7 @@ app.get("/videos", function(req, res){
     });
 });
 
-app.post("/addVideo", upload.single('url'),function(req, res){
+app.post("/addVideo", isEmad, upload.single('url'),function(req, res){
        cloudinary.v2.uploader.upload(req.file.path, {resource_type:"video", invalidate: true}, function(err, result) {
     if(err){
         req.flash("error", err.message);
@@ -335,7 +335,7 @@ app.post("/addVideo", upload.single('url'),function(req, res){
 }); 
 });
 
-app.delete("/videos/:id", function(req, res){
+app.delete("/videos/:id", isEmad, function(req, res){
     Video.findById(req.params.id, async function(err, video) {
     if(err) {
       req.flash("error", err.message);
@@ -404,7 +404,7 @@ app.post("/articles/:id",isLoggedIn, function(req, res){
     });
 });
 
-app.delete("/articles/:id/:commentId",isEmad, function(req, res){
+app.delete("/articles/:id/:commentId", isEmad, function(req, res){
    Article.findById(req.params.id, function(err, foundArticle){
        if(err){
            req.flash("error", err.message);

@@ -16,10 +16,11 @@
       <% for(var i = videos.length - 1;  i > -1; i--){%>
       <div class="col-md-6 col-lg-4 mt-3">
         <div class="card">
-          <video src="<%= videos[i].url %>" controls></video>
+          <video src="<%= videos[i].url %>" poster="<%= videos[i].poster %>" controls></video>
           <div class="card-body">
             <h5 class="card-title"><%= videos[i].title %></h5>
             <p class="card-text"><%= videos[i].body %></p>
+            <p>By <%= video[i].name %></p>
             <% if(currentUser && currentUser.email === "helllooper@gmail.com"){%>
             <form action="/videos/<%= videos[i]._id%>?_method=DELETE" method="POST">
               <button class="btn btn-danger" type="submit">DELETE</button>

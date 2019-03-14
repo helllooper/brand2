@@ -3,8 +3,8 @@
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col-lg-6 translatedL" id="p1img" style="background-image: url('<%= food[food.length - 1].image %>');"></div>
-      <div class="col-lg-6 p1text translatedR">
+      <div class="col-lg-6" id="p1img" style="background-image: url('<%= food[food.length - 1].image %>');"></div>
+      <div class="col-lg-6 p1text">
         <p>DAILY GUIDE</p>
         <h1><%= food[food.length -1].title%></h1>
         <h6><%= food[food.length -1].brief %></h6>
@@ -23,7 +23,7 @@
     <div class="row">
       <% if(food && food.length > 3){ %>
      <% for(i = food.length - 2; i > food.length - 6; i--){%>
-      <div class="col-md-6 col-lg-3">
+      <div class="col-md-6 col-lg-3 mb-3">
         <a href="/articles/<%= food[i]._id %>">
           <div class="card">
             <img src="<%= food[i].image %>" class="card-img-top" alt="...">
@@ -49,7 +49,7 @@
     <div class="row">
     <% if(desserts && desserts.length > 3){%>
      <% for(i = desserts.length - 1; i > desserts.length - 5; i--){%>
-            <div class="col-md-6 col-lg-3">
+            <div class="col-md-6 col-lg-3 mb-3">
               <a href="/articles/<%= desserts[i]._id %>">
                 <div class="card">
                   <img src="<%= desserts[i].image %>" class="card-img-top" alt="...">
@@ -77,7 +77,7 @@
     <div class="row">
       <% if(beverages && beverages.length > 3){ %>
      <% for(i = beverages.length - 1; i > beverages.length - 5; i--){%>
-            <div class="col-md-6 col-lg-3">
+            <div class="col-md-6 col-lg-3 mb-3">
               <a href="articles/<%= beverages[i]._id %>">
                 <div class="card">
                   <img src="<%= beverages[i].image %>" class="card-img-top" alt="...">

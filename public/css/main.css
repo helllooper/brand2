@@ -44,8 +44,8 @@ body {
 
 .fa-times {
 	position: absolute;
-	top: 10%;
-	right: 10%;
+	top: 30%;
+	right: 25%;
 }
 
 nav {
@@ -173,7 +173,7 @@ video{
 	height: 450px;
 }
 
-.card-title {
+.video-title {
 	font-weight: 700;
 	border-bottom: 3px solid #F7C658;
 	padding: 10px;
@@ -285,9 +285,18 @@ option {
 
 }
 
+#log {
+	width: 100%;
+	height: 100vh;
+	background-image:url("../images/portion1.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+
 #logIn{
   width: 360px;
-  margin: 100px auto;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
   padding: 45px;
   background-color: white;

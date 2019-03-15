@@ -18,7 +18,7 @@
         <div class="card">
           <video src="<%= videos[i].url %>" poster="<%= videos[i].poster %>" controls></video>
           <div class="card-body">
-            <h5 class="card-title"><%= videos[i].title %></h5>
+            <h5 class="card-title video-title"><%= videos[i].title %></h5>
             <p class="card-text"><%= videos[i].body %></p>
             <p>By <%= videos[i].chef %></p>
             <% if(currentUser && currentUser.email === "helllooper@gmail.com"){%>

@@ -15,7 +15,7 @@
     <div class="row mb-3">
       <% for(var i = videos.length - 1;  i > -1; i--){%>
       <div class="col-md-6 col-lg-4 mt-3">
-        <div class="card">
+        <div class="card" id="videoCard">
           <video src="<%= videos[i].url %>" poster="<%= videos[i].poster %>" controls></video>
           <div class="card-body">
             <h5 class="card-title video-title"><%= videos[i].title %></h5>

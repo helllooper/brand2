@@ -179,6 +179,10 @@ video{
 	padding: 10px;
 }
 
+#videoCard {
+	height: 600px;
+}
+
 .card-img-top {
 	border-radius: 0;
 }

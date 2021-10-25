@@ -27,7 +27,8 @@ body {
 
 #search input::placeholder {
 	font-weight: 700;
-	font-size: 20px;
+	font-size: 1.2em;
+	padding:10px;
 }
 
 #search input:focus {
